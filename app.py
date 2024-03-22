@@ -70,7 +70,7 @@ X = cv.fit_transform(df['lemmatized_text']).toarray()
 # returns all the unique word from data 
 
 #features = cv.get_feature_names()
-features = cv.get_feature_names()
+features = cv.get_feature_names_out()
 df_bow = pd.DataFrame(X, columns = features)
 df_bow.head()
 Question = 'What treatment options are available'                           # example
@@ -99,7 +99,7 @@ Question_lemma1 = text_normalization(Question1)
 Question_tfidf = tfidf.transform([Question_lemma1]).toarray()         # applying tf-idf
 # returns all the unique word from data with a score of that word
 #df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names())
-df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names())
+df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names_out())
 
 
 df_tfidf.head()
