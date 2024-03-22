@@ -7,7 +7,7 @@ nltk.download('averaged_perceptron_tagger')
 
 
 
-#nltk.download('punkt') 
+nltk.download('punkt') 
 #nltk.download('averaged_perceptron_tagger') 
 
 # Set paths 
@@ -161,6 +161,10 @@ def userip():
         # Handle GET requests here, if needed
         # For example, return some informative message
         return jsonify({'message': 'GET method not supported for this endpoint'})
+@app.route('/careip', methods=['POST'])
+def careip():
+    data = request.get_json()
+    return jsonify(chat_tfidf(data))
 
 @app.route('/signsub', methods=['POST'])
 def signsub():

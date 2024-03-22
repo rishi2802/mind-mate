@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         messageContainer.innerHTML = userLabel + userMessage;
         chatBox.appendChild(messageContainer);
         chatBox.scrollTop = chatBox.scrollHeight;
-        displayBotMessage(getBotReply());
+        sendMessageToBackend(message)
     }
 
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // For demonstration purposes, generate a random response
         $.ajax({
             type : "POST",
-            url : '/userip',
+            url : '/careip',
             dataType: "json",
             data: JSON.stringify(message),
             contentType: 'application/json;charset=UTF-8',
