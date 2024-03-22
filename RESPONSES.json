@@ -1,0 +1,64 @@
+{
+  "intents": [
+    {
+      "tag": "patient_emotions",
+      "patterns": [
+        "I'm feeling overwhelmed by my emotions",
+        "I'm experiencing loneliness",
+        "I'm having trouble coping with stress",
+        "I feel like I'm a burden to others",
+        "I'm struggling with self-esteem issues"
+      ],
+      "responses": [
+        "It's okay to feel overwhelmed. Let's work together to understand and manage your emotions.",
+        "Feeling lonely can be tough. Let's explore ways to build connections and improve your support network.",
+        "Coping with stress is challenging. Let's develop personalized coping strategies to help you through.",
+        "Feeling like a burden is a common thought, but let's explore ways to shift that perspective and find support.",
+        "Struggling with self-esteem is tough. Let's work on building self-confidence and self-compassion."
+      ],
+      "context": "patient"
+    },
+    {
+      "tag": "patient_symptoms",
+      "patterns": [
+        "I'm finding it hard to get out of bed in the morning",
+        "I'm feeling disconnected from reality",
+        "I'm experiencing intrusive thoughts",
+        "I'm having difficulty managing my anger",
+        "I'm having trouble with my eating habits"
+      ],
+      "responses": [
+        "Getting out of bed can be difficult, but let's identify small steps you can take to start your day.",
+        "Feeling disconnected can be distressing. Let's explore grounding techniques to bring you back to the present.",
+        "Intrusive thoughts can be overwhelming. Let's develop strategies to manage and cope with them.",
+        "Managing anger can be challenging. Let's explore healthy ways to express and manage your emotions.",
+        "Eating habits can impact mental health. Let's discuss strategies for a balanced diet and self-care."
+      ],
+      "context": "patient"
+    },
+    {
+      "tag": "therapist_treatment",
+      "patterns": [
+        "What are the treatment options for a patient with depression?",
+        "Can you suggest interventions for a client experiencing anxiety?",
+        "What therapies can be effective for PTSD?",
+        "Are there any recommended treatments for insomnia?",
+        "How can I help a patient with bipolar disorder?",
+        "Can you advise on treatment options for OCD?",
+        "What interventions are suitable for someone with substance abuse issues?",
+        "How can I support a patient with eating disorders?"
+      ],
+      "responses": [
+        "For depression, treatment options may include therapy (such as cognitive-behavioral therapy), medication, or a combination of both. It's important to assess the individual's needs and preferences.",
+        "Interventions for anxiety can include cognitive-behavioral techniques, relaxation exercises, mindfulness practices, and medication if necessary. Tailor the approach based on the client's specific symptoms and preferences.",
+        "For PTSD, evidence-based therapies like trauma-focused cognitive-behavioral therapy (CBT), eye movement desensitization and reprocessing (EMDR), and exposure therapy can be effective. Medications may also be prescribed in some cases.",
+        "Treatment for insomnia may involve cognitive-behavioral therapy for insomnia (CBT-I), sleep hygiene practices, relaxation techniques, and in some cases, medication under the guidance of a healthcare professional.",
+        "Supporting a patient with bipolar disorder may involve mood stabilizing medications, psychoeducation, therapy (such as cognitive-behavioral therapy or interpersonal and social rhythm therapy), and lifestyle adjustments.",
+        "For OCD, exposure and response prevention (ERP) therapy, cognitive-behavioral therapy (CBT), and medication (such as selective serotonin reuptake inhibitors) are commonly used treatments. Collaborate with the patient to develop a treatment plan that suits their needs.",
+        "Interventions for substance abuse issues may include therapy (such as cognitive-behavioral therapy, motivational interviewing, or contingency management), support groups (such as Alcoholics Anonymous or Narcotics Anonymous), and medication-assisted treatment.",
+        "Supporting a patient with eating disorders may involve a multidisciplinary approach, including therapy (such as cognitive-behavioral therapy or dialectical behavior therapy), nutritional counseling, medical monitoring, and support groups. Collaborate with other healthcare professionals to provide comprehensive care."
+      ],
+      "context": "therapist"
+    }
+  ]
+}

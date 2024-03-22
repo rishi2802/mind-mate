@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.gradient-circle {
+    width: 30vw;
+    height: 30vw;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 50%;
+    top: 190px; 
+    left: 975px; 
+    background:radial-gradient(circle, #a0eec6 0%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 90%);
+    position: absolute;
+    z-index: 0;
+}
+
+
+.svg-container {
+position: absolute; 
+top: 390px; 
+left: 500px; 
+z-index: 55; 
+background-color: transparent;
+}
+
+.logo>h1{
+    font-size: 43.22;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.navbar {
+    background: fixed;
+    background-color: transparent;
+    padding: 1px 0;
+    /* background-color: #0E6E17; */
+    width: 100%; 
+    /* box-sizing: border-box; */
+    z-index: 99;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;
+}
+
+
+  
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2px;
+    width: 100%; 
+}
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+  }
+  
+
+  
+  .navbar-title {
+    margin: 0;
+    background: linear-gradient(to right, #0E6E17, #1DE22F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 43.22;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .navbar-content {
+    display: flex;
+    /* align-items: center; */
+  }
+
+
+  .features ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+  }
+  
+  .features ul li {
+    font-size: 20.22px;
+    color: #404040;
+    margin-right: 47.59px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+
+  }
+  
+  .features button {
+    font-size: 20.22px;
+    background: linear-gradient(90deg, #10791A, #16A824);
+    color: #ffffff;
+    border: none;
+    border-radius: 17.05px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 80px;
+    font-weight: bolder;
+
+  }
+
+  
+  .conatiner-main{
+    margin-left: 90px;
+    margin-top: 280px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+  }
+
+    .gradient-main {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: 70vh;
+    height: 70vh;
+    max-width: 600px;
+    max-height: 600px;
+    background: radial-gradient(circle, #c1d6cb 0%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 90%);
+    z-index: -1;
+    }
+ 
+  .main-content > h1{
+    font-weight: bold;
+    font-size: 40px;
+    background: linear-gradient(to right, #0E6E17, #1DE22F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+    margin-bottom: 10px;    
+  }
+  .main-content> h3{
+    padding-bottom: 20px;
+    color: #8A8585;
+  }
+
+  .formContainer {
+    width: 400px; /* Adjust width as needed */
+    margin-top: 10px; /* Adjust top margin as needed */
+    margin-right: 70px; /* Adjust right margin as needed */
+    margin-left: auto; /* Add this line to align the container to the right */
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+    position: absolute; /* Add this line to position it absolutely */
+    top: 50%; /* Adjust top position */
+    transform: translateY(-50%); /* Center it vertically */
+    right: 0; /* Align it to the right */
+}
+
+.formContainer h1 {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.formContainer hr {
+    border: 1px solid #ccc; /* Style the horizontal line */
+    margin-bottom: 20px;
+}
+
+.formContainer input[type="text"],
+.formContainer input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+    background-color: transparent;
+}
+
+.formContainer button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #10791A;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.formContainer button[type="submit"]:hover {
+    background-color: #16A824;
+}
