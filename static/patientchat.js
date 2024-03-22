@@ -41,10 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
         messageContainer.innerHTML = userLabel + userMessage;
         chatBox.appendChild(messageContainer);
         chatBox.scrollTop = chatBox.scrollHeight;
-        displayBotMessage(getBotReply());
+        sendMessageToBackend(message)
     }
-
-
     function getBotReply() {
         const randomResponses = [
             "I'm here to help.",
@@ -68,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 displayBotMessage(data);
                 }
             });
-        
+        console.log("hiii")
     }
 });
 

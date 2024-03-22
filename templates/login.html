@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="./styles.css"> -->
-    <link rel="stylesheet" href="./login-styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login-styles.css') }}">
 
     <title>MindMate Sign In</title>
 </head>
@@ -42,14 +42,14 @@
          </section>
   
     
-    <form action="./logsub" method="POST">
+    <form action="templates/logsub" method="POST">
         <div class="formContainer">
            <h1>Welcome Back</h1>
            <hr>
            <input type="text" placeholder="Enter Email" name="email" required>
            <input type="password" placeholder="Enter Password" name="password" required>
            <div>
-              <button type="submit" class="signup">Submit</button>
+              <button type="submit" class="signup"> Submit</button>
            </div>
         </div>
      </form>
