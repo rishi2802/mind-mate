@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+    background-color: #e4e4e4;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.gradient-circle {
+    width: 30vw;
+    height: 30vw;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 50%;
+    top: 190px; 
+    left: 975px; 
+    background:radial-gradient(circle, #a0eec6 0%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0) 90%);
+    position: absolute;
+    z-index: 0;
+}
+
+
+.svg-container {
+position: absolute; 
+top: 190px; 
+left: 900px; 
+z-index: 55; 
+background-color: transparent;
+}
+
+.logo>h1{
+    font-size: 43.22;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.navbar {
+    background: fixed;
+    background-color: transparent;
+    padding: 1px 0;
+    /* background-color: #0E6E17; */
+    width: 100%; 
+    /* box-sizing: border-box; */
+    z-index: 99;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;
+}
+
+
+  
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2px;
+    width: 100%; 
+}
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+  }
+  
+
+  
+  .navbar-title {
+    margin: 0;
+    background: linear-gradient(to right, #0E6E17, #1DE22F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 43.22;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .navbar-content {
+    display: flex;
+    /* align-items: center; */
+  }
+
+
+  .features ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+  }
+  
+  .features ul li {
+    font-size: 20.22px;
+    color: #404040;
+    margin-right: 47.59px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+
+  }
+  
+  .features button {
+    font-size: 20.22px;
+    background: linear-gradient(90deg, #10791A, #16A824);
+    color: #ffffff;
+    border: none;
+    border-radius: 17.05px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 80px;
+    font-weight: bolder;
+
+  }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.features button {
+    font-size: 16px;
+    background: linear-gradient(90deg, #10791A, #16A824);
+    color: #ffffff;
+    border: none;
+    border-radius: 17px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    flex: 0 0 200px;
+    background-color: #ffffff;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 12vh;
+    border-radius: 30px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: #7e7e7e;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sidebar button:hover {
+    background-color: #dbd8d8;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    padding-top: 90px;
+    margin-bottom: 50px;
+}
+
+.input-container {
+    position: fixed;
+    bottom: 17px;
+    left: 270px;
+    right: 10px;
+    /* width: calc(100% - 250px); */
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.input-container input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    border-radius: 30px;
+}
+
+.input-container button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.user-message {
+    background-color:transparent;
+    color: #575353;
+    border-radius: 5px;
+    /* padding: 10px;
+    margin: 5px 10px; */
+    padding: 1px;
+
+}
+
+.bot-message {
+    background-color:transparent;
+    border-radius: 5px;
+    color: #575353;
+    /* padding: 10px; */
+    /* margin: 5px 10px; */
+    padding: 1px;
+
+}

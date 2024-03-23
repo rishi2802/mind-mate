@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Health Chatbot</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='chat-styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='caretaker-styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="../static/caretaker-styles.css"> -->
 
 </head>
 <body>
@@ -26,8 +27,8 @@
         <div class="sidebar">
             <h2>DASHBOARD</h2>
             <ul>
-                <li><button id="patient-btn">Patient</button></li>
-                <li><button id="caretaker-btn">Care Taker</button></li>
+                <li><button id="patient-btn">Chat with AI</button></li>
+                <li><button id="caretaker-btn">Patients</button></li>
             </ul>
         </div>
         <div class="chat-box" id="chat-box">
@@ -41,5 +42,5 @@
     
     <script src="{{ url_for('static', filename='caretakerchat.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</body>
+    </body>
 </html>
