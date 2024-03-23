@@ -69,8 +69,8 @@ cv = CountVectorizer()                                  # intializing the count 
 X = cv.fit_transform(df['lemmatized_text']).toarray()
 # returns all the unique word from data 
 
-#features = cv.get_feature_names()
-features = cv.get_feature_names_out()
+features = cv.get_feature_names()
+#features = cv.get_feature_names_out()
 df_bow = pd.DataFrame(X, columns = features)
 df_bow.head()
 Question = 'What treatment options are available'                           # example
@@ -98,8 +98,8 @@ x_tfidf = tfidf.fit_transform(df['lemmatized_text']).toarray()        # transfor
 Question_lemma1 = text_normalization(Question1)
 Question_tfidf = tfidf.transform([Question_lemma1]).toarray()         # applying tf-idf
 # returns all the unique word from data with a score of that word
-#df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names())
-df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names_out())
+df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names())
+#df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names_out())
 
 
 df_tfidf.head()
@@ -136,7 +136,14 @@ app = Flask(__name__)
 client = MongoClient('mongodb://localhost:27017/')
 db = client['Mind']  # Change 'your_database_name' to your desired database name
 collection = db['patient']  # Change 'your_collection_name' to your desired collection name
-collection.insert_one({"email": "abc@gmail.com", "password": 1234, "age": 20, "gender": "male"})
+document = {"name" : "Abhinav", "caretaker":"Akash","email": "abc@gmail.com","DAS":23,"Date":"22-02-2024", "password": 1234, "age": 20, "gender": "male"}
+
+# Check if document with the same email exists
+existing_document = collection.find_one({"email": document["email"]})
+
+if existing_document is None:
+    # If document doesn't exist, insert it
+    collection.insert_one(document)
 
 @app.route('/')
 def hello():
@@ -208,8 +215,8 @@ def careip():
     X = cv.fit_transform(df['lemmatized_text']).toarray()
     # returns all the unique word from data 
 
-    #features = cv.get_feature_names()
-    features = cv.get_feature_names_out()
+    features = cv.get_feature_names()
+    #features = cv.get_feature_names_out()
     df_bow = pd.DataFrame(X, columns = features)
     df_bow.head()
     Question = 'What treatment options are available'                           # example
@@ -237,8 +244,8 @@ def careip():
     Question_lemma1 = text_normalization(Question1)
     Question_tfidf = tfidf.transform([Question_lemma1]).toarray()         # applying tf-idf
     # returns all the unique word from data with a score of that word
-    #df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names())
-    df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names_out())
+    df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names())
+    #df_tfidf = pd.DataFrame(x_tfidf, columns=tfidf.get_feature_names_out())
 
 
     df_tfidf.head()
@@ -295,7 +302,9 @@ def logsub():
     if(email=='caretaker@gmail.com'):
         return render_template('caretaker.html')
     # Check if email and password combination exists in the collection
+    print(email,password)
     user = collection.find_one({"email": email, "password": password})
+    
     if user:
         return render_template('patientchat.html')  # Redirect to success page or any other page
     else:
