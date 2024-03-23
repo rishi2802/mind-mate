@@ -309,6 +309,18 @@ def logsub():
         return render_template('patientchat.html')  # Redirect to success page or any other page
     else:
         return render_template('patientchat.html', text="Invalid email or password")
+@app.route('/patientdash')
+def dash():
+    cursor = collection.find({"email": "abc@gmail.com", "password": 1234})
+    l=[]
+    # Iterate over the cursor and print each document
+    for document in cursor:
+        l.append(document.get('name'))
+        l.append(document.get('caretaker'))
+        l.append(document.get('email'))
+        l.append(document.get('DAS'))
+        l.append(document.get('Date'))
+    return render_template('patientdash.html',l=l)
 
 if __name__ == '__main__':
     app.run(debug=True)
